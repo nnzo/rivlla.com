@@ -1,27 +1,68 @@
 <html>
-  <link rel="icon" href="favicon.jpg" type="image/png">
-
   <head>
     <title>What the Rivlla!!??</title>
+<link rel="icon" href="favicon.jpg" type="image/png">
     <style>
       body {
         font-family: "Comic Sans MS", "Comic Sans", cursive;
+        background: linear-gradient(-45deg, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 400% 400%;
+        animation: rainbowBG 10s ease infinite;
+        color: lime;
+        text-align: center;
+      }
+
+      @keyframes rainbowBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      ul {
+        list-style-type: square;
+        font-size: 18px;
+        font-weight: bold;
+        animation: colorCycle 4s infinite;
+      }
+
+      @keyframes colorCycle {
+        0%   { color: red; }
+        25%  { color: orange; }
+        50%  { color: lime; }
+        75%  { color: cyan; }
+        100% { color: violet; }
+      }
+
+      blink {
+        animation: blinker 0.6s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% { opacity: 0; }
+      }
+
+      marquee {
+        font-size: 28px;
+        font-weight: bold;
+        color: magenta;
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
-    <p>rivlla fan page</p>
+    <marquee>Welcome to the OFFICIAL Rivlla Fan Club!! 😎🔥</marquee>
+    <p><blink>rivlla fan page</blink></p>
     <br />
     <p><strong>why rivlla is my idol:</strong></p>
     <ul>
-      <li>rivlla is so pretty</li>
-      <li>rivlla is top 5 in nz on counter strik</li>
-      <li>rivlla is so awesome and pretty</li>
-      <li>i love rivlla</li>
-      <li>rivlla is the most awesome and prettiest cs player ever </li>
-      <li>rivlla is so good at counter strik</li>
-      <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHQ5MHFpdXl6cjNmMmt5Y3Jqc3JveGRtZmllcnJkZnhsMHRlemkzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wpvc0qjqGvElYP6a4t/giphy.gif" width="300">
-
+      <li style="font-size: 20px;">rivlla is so pretty</li>
+      <li style="font-size: 22px; font-family: Impact;">rivlla is top 5 in nz on counter strik</li>
+      <li style="color: hotpink;">rivlla is so awesome and pretty</li>
+      <li style="font-size: 26px;">i love rivlla 💖</li>
+      <li style="font-style: italic;">rivlla is the most awesome and prettiest cs player ever</li>
+      <li style="text-decoration: underline; font-size: 24px;">rivlla is so good at counter strik</li>
+      <li><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHQ5MHFpdXl6cjNmMmt5Y3Jqc3JveGRtZmllcnJkZnhsMHRlemkzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wpvc0qjqGvElYP6a4t/giphy.gif" width="300"></li>
     </ul>
+    <p style="font-size: 32px; color: yellow; background-color: purple;">Long Live Rivlla!!</p>
   </body>
 </html>
