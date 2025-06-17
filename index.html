@@ -1,76 +1,151 @@
 <html>
-  <head>
-    <title>What the Rivlla!!??</title>
-<link rel="icon" href="favicon.jpg" type="image/png">
-    <style>
-      body {
-        font-family: "Comic Sans MS", "Comic Sans", cursive;
-        background: linear-gradient(-45deg, red, orange, yellow, green, cyan, blue, violet);
-        background-size: 400% 400%;
-        animation: rainbowBG 10s ease infinite;
-        color: lime;
-        text-align: center;
-      }
+<head>
+  <title>What the Rivlla!!??</title>
+  <link rel="icon" href="favicon.jpg" type="image/png">
+  <style>
+    body {
+      font-family: "Comic Sans MS", cursive;
+      background: linear-gradient(-45deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400% 400%;
+      animation: rainbowBG 10s ease infinite;
+      color: lime;
+      text-align: center;
+      overflow-x: hidden;
+      user-select: none;
+      cursor: crosshair;
+    }
 
-      @keyframes rainbowBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
+    @keyframes rainbowBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-      ul {
-        list-style-type: square;
-        font-size: 18px;
-        font-weight: bold;
-        animation: colorCycle 4s infinite;
-      }
+    @keyframes colorCycle {
+      0% { color: red; }
+      25% { color: orange; }
+      50% { color: lime; }
+      75% { color: cyan; }
+      100% { color: violet; }
+    }
 
-      @keyframes colorCycle {
-        0%   { color: red; }
-        25%  { color: orange; }
-        50%  { color: lime; }
-        75%  { color: cyan; }
-        100% { color: violet; }
-      }
+    ul {
+      list-style-type: square;
+      font-size: 18px;
+      font-weight: bold;
+      animation: colorCycle 2s infinite;
+      border: 5px dashed hotpink;
+      padding: 20px;
+      margin: 0 auto;
+      width: 60%;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-      blink {
-        animation: blinker 0.6s linear infinite;
-      }
+    blink {
+      animation: blinker 0.3s linear infinite;
+    }
 
-      @keyframes blinker {
-        50% { opacity: 0; }
-      }
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
 
-      marquee {
-        font-size: 28px;
-        font-weight: bold;
-        color: magenta;
-        background-color: yellow;
-      }
-    </style>
-  </head>
-  <body>
-    <marquee>Welcome to the OFFICIAL Rivlla Fan Club!! 😎🔥</marquee>
-    <p><blink>rivlla fan page</blink></p>
-    <br />
-    <p><strong>why rivlla is my idol:</strong></p>
-    <ul>
-      <li style="font-size: 20px;">rivlla is so pretty</li>
-      <li style="font-size: 22px; font-family: Impact;">rivlla is top 5 in nz on counter strik</li>
-      <li style="color: hotpink;">rivlla is so awesome and pretty</li>
-      <li style="font-size: 26px;">i love rivlla 💖</li>
-      <li style="font-style: italic;">rivlla is the most awesome and prettiest cs player ever</li>
-      <li style="text-decoration: underline; font-size: 24px;">rivlla is so good at counter strik</li>
-      <li><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHQ5MHFpdXl6cjNmMmt5Y3Jqc3JveGRtZmllcnJkZnhsMHRlemkzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wpvc0qjqGvElYP6a4t/giphy.gif" width="300"></li>
-    </ul>
-    <p style="font-size: 32px; color: yellow; background-color: purple;">Long Live Rivlla!!</p>
-    <video width="320" height="240" controls>
-  <source src="clip.mp4" type="video/mp4">
-browser no supporta the video!!!noooo:(((
-</video>
-  </body>
+    marquee {
+      font-size: 28px;
+      font-weight: bold;
+      color: magenta;
+      background-color: yellow;
+      border: 3px double red;
+    }
+
+    .spinny {
+      animation: spin 5s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .upsideDown {
+      transform: rotateX(180deg);
+    }
+
+    .glowText {
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+      font-size: 32px;
+      color: #0ff;
+    }
+
+    .neonBox {
+      border: 5px solid cyan;
+      animation: flashBorder 1s infinite;
+    }
+
+    @keyframes flashBorder {
+      0% { border-color: cyan; }
+      50% { border-color: magenta; }
+      100% { border-color: cyan; }
+    }
+
+    .vertical-marquee {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      animation: scrollUp 10s linear infinite;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      font-size: 24px;
+      background: black;
+      color: yellow;
+    }
+
+    @keyframes scrollUp {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="rickroll.mp3" type="audio/mpeg">
+  </audio>
+
+  <marquee>Welcome to the OFFICIAL Rivlla Fan Club!! 😎🔥</marquee>
+  <div class="vertical-marquee">RIVLLA FOREVER 💥🔥💖</div>
+
+  <p><blink>rivlla fan page</blink></p>
+  <br />
+  <p class="glowText"><strong>why rivlla is my idol:</strong></p>
+
+  <ul class="neonBox">
+    <li class="spinny">rivlla is so pretty</li>
+    <li style="font-size: 22px; font-family: Impact;">rivlla is top 5 in nz on counter strik</li>
+    <li style="color: hotpink;">rivlla is so awesome and pretty</li>
+    <li style="font-size: 26px;">i love rivlla 💖</li>
+    <li style="font-style: italic;">rivlla is the most awesome and prettiest cs player ever</li>
+    <li style="text-decoration: underline; font-size: 24px;">rivlla is so good at counter strik</li>
+    <li>
+      <img class="upsideDown spinny" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHQ5MHFpdXl6cjNmMmt5Y3Jqc3JveGRtZmllcnJkZnhsMHRlemkzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wpvc0qjqGvElYP6a4t/giphy.gif" width="300">
+    </li>
+  </ul>
+
+  <p class="glowText">Long Live Rivlla!!</p>
+
+  <video width="320" height="240" controls>
+    <source src="clip.mp4" type="video/mp4">
+    browser no supporta the video!!!noooo:(((
+  </video>
+  <video width="320" height="240" controls>
+    <source src="clip2.mp4" type="video/mp4">
+    browser no supporta the video!!!noooo:(((
+  </video>
+
   <p>
   Join her Discord
   <a href="https://discord.gg/Y7c5YcCREn" target="_blank">here</a>!
-</p>
+
+  <marquee behavior="alternate" scrollamount="20" style="color: white; font-size: 48px;">🔥🔥🔥RIVLLA 4 PRESIDENT🔥🔥🔥</marquee>
+</body>
 </html>
